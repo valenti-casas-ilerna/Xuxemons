@@ -1,0 +1,39 @@
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgb(9,9,121);
+  background: linear-gradient(180deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 70%, rgba(255,255,255,1) 99%);
+}
+
+@keyframes star-enter {
+  0%   { width: 1%;}
+  /*25%  {left:40%; top:80%; width: 2%;}
+  50%  {left:32%; top:60%; width: 3%;}
+  75%  {left:24%; top:40%; width: 4%;}*/
+  100% { width: 5%;}
+}
+
+@keyframes x {
+  to { left:15%; }
+}
+@keyframes y {
+  to { top:199.5px; }
+}
+
+.star {
+  position: relative;
+  //left: 48%;
+  //top: 100%;
+  left:48%;
+  top:400px;
+  width: 5%;
+  /* animation: <name> <duration> <timing-function> <delay>
+                <iteration-count> <direction> <fill-mode> <play-state> */
+  //animation: star-enter 0.5s linear 0.5s normal forwards running;
+  //animation: star-enter 2s cubic-bezier(0,500,1,500) 0.5s normal forwards;
+  animation:
+    x 2s linear infinite,
+    y 2s infinite cubic-bezier(0,100,1,100),
+    star-enter 1s linear forwards;
+}
