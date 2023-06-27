@@ -11,11 +11,6 @@
 
 <div class="container">
 
-  <mat-grid-list style="margin-top: 40px" [cols]="gridColumns" rowHeight="275px">
-    <mat-grid-tile *ngFor="let menucard of menucards">
-      <app-menu-card [menuCard]="menucard"></app-menu-card>
-    </mat-grid-tile>
-  </mat-grid-list>
-
+  <router-outlet></router-outlet>
 
 </div>

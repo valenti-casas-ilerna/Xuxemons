@@ -10,7 +10,8 @@ export class MenuCardComponent {
 
   @Input() menuCard: MenuCard = {
     title: 'No-Title',
-    img: ''
+    img: '',
+    url: ''
   };
 
 }
