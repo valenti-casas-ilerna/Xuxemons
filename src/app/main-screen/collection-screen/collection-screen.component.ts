@@ -9,7 +9,7 @@ import {CollectionItem, ElementType} from "../models/collection-item";
 })
 export class CollectionScreenComponent implements OnInit{
   collection: CollectionItem[] = [];
-  gridColumns: number = 8;
+  gridColumns: number = 7;
   headers: string[] = [];
   data: any[] = [];
 
@@ -18,18 +18,20 @@ export class CollectionScreenComponent implements OnInit{
   ) {}
 
   ngOnInit() {
-    this.responsive.observe([Breakpoints.Medium, Breakpoints.Small, Breakpoints.XSmall])
+    this.responsive.observe([Breakpoints.Large, Breakpoints.Medium, Breakpoints.Small, Breakpoints.XSmall])
       .subscribe((result: BreakpointState) => {
         const breakpoints = result.breakpoints;
 
-        this.gridColumns = 8;
+        this.gridColumns = 7;
 
-        if (breakpoints[Breakpoints.Medium]) {
-          this.gridColumns = 8;
-        } else if (breakpoints[Breakpoints.Small]) {
+        if (breakpoints[Breakpoints.Large]) {
           this.gridColumns = 6;
-        } else if (breakpoints[Breakpoints.XSmall]) {
+        } else if (breakpoints[Breakpoints.Medium]) {
+          this.gridColumns = 5;
+        } else if (breakpoints[Breakpoints.Small]) {
           this.gridColumns = 4;
+        } else if (breakpoints[Breakpoints.XSmall]) {
+          this.gridColumns = 2;
         }
       });
   }
