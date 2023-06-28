@@ -1,1 +1,10 @@
-<p>collection-screen works!</p>
+<div *ngIf="collection.length == 0">
+  <button type="button" mat-raised-button (click)="fileInput.click()" color="primary">Subir fichero .csv</button>
+  <input hidden (change)="onFileSelected($event)" #fileInput type="file" id="file" accept="text/csv">
+</div>
+
+<mat-grid-list style="margin-top: 40px" [cols]="gridColumns" rowHeight="275px">
+  <mat-grid-tile *ngFor="let collection_item of collection">
+    <app-collection-item [xuxemon]="collection_item"></app-collection-item>
+  </mat-grid-tile>
+</mat-grid-list>

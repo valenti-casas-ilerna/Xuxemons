@@ -1,0 +1,51 @@
+@import "../../../app.component";
+
+.container {
+  display: grid;
+  width: 150px;
+  height: 225px;
+  background-color: $card_bg;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.image {
+  grid-row: 1;
+  grid-column: 1;
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+.locked {
+  filter: brightness(0);
+}
+
+.name {
+  grid-row: 2;
+  grid-column: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.type {
+  grid-row: 3;
+  grid-column: 1;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.type_water {
+  color: $element_water;
+}
+
+.type_earth {
+  color: $element_earth;
+}
+
+.type_air {
+  color: $element_air;
+}

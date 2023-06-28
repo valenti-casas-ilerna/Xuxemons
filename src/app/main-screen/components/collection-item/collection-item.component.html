@@ -1,0 +1,15 @@
+<div class="container">
+
+  <div class="image" [ngClass]="{ 'locked': (!this.xuxemon.owned) }">
+    <img [src]="getRouteToImage(this.xuxemon.img)" alt="Xuxemon image">
+  </div>
+
+  <div class="name">
+    <span>{{this.xuxemon.name}}</span>
+  </div>
+
+  <div class="type" [ngClass]="{ 'type_earth': (this.xuxemon.type == 1), 'type_water': (this.xuxemon.type == 2), 'type_air': (this.xuxemon.type == 3)}">
+    <h4>{{this.getElementName(this.xuxemon.type)}}</h4>
+  </div>
+
+</div>

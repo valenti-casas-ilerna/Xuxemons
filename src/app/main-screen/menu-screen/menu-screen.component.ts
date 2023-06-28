@@ -18,6 +18,7 @@ export class MenuScreenComponent implements OnInit {
     this.menucards.push({title: 'Tienda', img: 'assets/menu/store.png', url:'../'});
     this.menucards.push({title: 'Colección', img: 'assets/menu/xuxedex.png', url:'../collection'});
     this.menucards.push({title: 'Hospital', img: 'assets/menu/hospital.png', url:'../'});
+    this.menucards.push({title: 'Inventario', img: 'assets/menu/bag.png', url:'../'});
   }
 
   ngOnInit() {

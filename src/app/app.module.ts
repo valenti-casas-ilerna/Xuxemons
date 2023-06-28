@@ -14,6 +14,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MenuCardComponent} from './main-screen/components/menu-card/menu-card.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import { MenuScreenComponent } from './main-screen/menu-screen/menu-screen.component';
+import { CollectionItemComponent } from './main-screen/components/collection-item/collection-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MenuScreenComponent } from './main-screen/menu-screen/menu-screen.compo
     MainScreenComponent,
     MenuCardComponent,
     CollectionScreenComponent,
-    MenuScreenComponent
+    MenuScreenComponent,
+    CollectionItemComponent
   ],
   imports: [
     BrowserModule,
